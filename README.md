@@ -1,10 +1,10 @@
 # Docker-Compose
 
-# Colaborador
+## Colaborador
 
 Andrea Elizabeth Blanco Suarez    BS200382
 
-# Video Youtube
+## Video Youtube
 
 https://youtu.be/BQ2YsrDIwsE
 
