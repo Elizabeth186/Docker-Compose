@@ -1,0 +1,29 @@
+version: '3'
+services:
+ dbmysql:
+  image: mysql:5.7
+  container_name: cotainerdb
+  restart: always
+  volumes:
+   - "./db-data:/var/lib/mysql"
+  environment:
+    MYSQL_ROOT_PASSWORD: user1
+    MYSQL_DATABASE: dockerappdb
+    MYSQL_USER: user1
+    MYSQL_PASSWORD: user1
+  ports:
+   - "3307:3306" kkkkk
+
+ app:
+  depends_on:
+   - dbmysql
+  image: practicodocker/imagenodejs
+  container_name: cotainerapp
+  restart: always
+  environment:
+    MYSQL_HOST: dbmysql
+    MYSQL_USER: user1
+    MYSQL_PASSWORD: user1
+    MYSQL_DB: dockerappdb
+  ports:
+   - "3000:3000"
